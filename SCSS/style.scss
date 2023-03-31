@@ -65,14 +65,14 @@
     }
     
      :root {
-        --background-color: linear-gradient( to bottom, rgba(237, 234, 177, 0.978), rgba(249, 142, 142, 0.514)), url(/sunset_salt_lake_L.jpeg);
-        --background_bg: linear-gradient( to bottom, rgba(76, 53, 53, 0.75), rgba(235, 77, 75, 0.750)), url(/bg3.png);
-        --background_star: linear-gradient( to bottom, rgba(75, 52, 52, 0.51), rgba(126, 78, 78, 0.498)), url(/stars.gif);
+        --background-color: linear-gradient( to bottom, rgba(237, 234, 177, 0.978), rgba(249, 142, 142, 0.514)), url(https://VergaraJames.github.io/ZEN_Garden/sunset_salt_lake_L.jpeg);
+        --background_bg: linear-gradient( to bottom, rgba(76, 53, 53, 0.75), rgba(235, 77, 75, 0.750)), url(https://VergaraJames.github.io/ZEN_Garden/bg3.png);
+        --background_star: linear-gradient( to bottom, rgba(75, 52, 52, 0.51), rgba(126, 78, 78, 0.498)), url(https://VergaraJames.github.io/ZEN_Garden/stars.gif);
         --background2: hsla(198, 100%, 53%, 0.106);
         --background3: hsla(156, 36%, 25%, 0.102);
         --background4: hsla(176, 100%, 53%, 0);
         --background5: hsla(215, 70%, 56%, 0.402);
-        --background-default: linear-gradient( to bottom, rgba(76, 53, 53, 0.75), rgba(235, 77, 75, 0.750)), url(/sunset_salt_lake_L.jpeg);
+        --background-default: linear-gradient( to bottom, rgba(76, 53, 53, 0.75), rgba(235, 77, 75, 0.750)), url(https://VergaraJames.github.io/ZEN_Garden/sunset_salt_lake_L.jpeg);
         --black-alpha-color: rgba(0, 0, 0, 0.5);
         --black-color: hsl(0, 0%, 0%);
         --color_active: hsl(0, 75%, 78%);
@@ -111,7 +111,7 @@
     }
     
     body {
-        background-image: linear-gradient( to bottom, rgba(237, 234, 177, 0.978), rgba(249, 142, 142, 0.514)), url(/sunset_salt_lake_L.jpeg);
+        background-image: linear-gradient( to bottom, rgba(237, 234, 177, 0.978), rgba(249, 142, 142, 0.514)), url(https://VergaraJames.github.io/ZEN_Garden/sunset_salt_lake_L.jpeg);
         background-image: var(--background-default);
         font-family: var(--font_robo);
         color: var(--color_white);
