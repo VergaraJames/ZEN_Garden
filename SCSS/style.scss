@@ -1,0 +1,355 @@
+    @use 'sass:math';
+    // font-size: rem(30);
+    // Throw an error if the parameter has a unit
+    @function rem_size($pixel) {
+        // $pixel has a unit, throw an error
+        // divide $pixel by 16 to return rems
+        @if math.is-unitless($pixel) {
+            @return(math.div($pixel, 16)+rem);
+        }
+        @else {
+            @error 'do not use rem word unit';
+        }
+    }
+    /* latin */
+    
+    @font-face {
+        font-family: "Archivo", sans-serif;
+        font-style: italic;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/archivo/v18/k3k8o8UDI-1M0wlSfdzyIEkpwTM29hr-8mTYIRyOSVz60_PG_HBftCdrD08.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* latin */
+    
+    @font-face {
+        font-family: "Sans", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVI.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* latin */
+    
+    @font-face {
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* latin */
+    
+    @font-face {
+        font-family: "Roboto_Bold_Italic";
+        font-style: italic;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic6CsQ.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* latin */
+    
+    @font-face {
+        font-family: 'Cookie';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/cookie/v17/syky-y18lb0tSbf9kgqS.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    
+     :root {
+        --background-color: linear-gradient( to bottom, rgba(237, 234, 177, 0.978), rgba(249, 142, 142, 0.514)), url(/sunset_salt_lake_L.jpeg);
+        --background_bg: linear-gradient( to bottom, rgba(76, 53, 53, 0.75), rgba(235, 77, 75, 0.750)), url(/bg3.png);
+        --background_star: linear-gradient( to bottom, rgba(75, 52, 52, 0.51), rgba(126, 78, 78, 0.498)), url(/stars.gif);
+        --background2: hsla(198, 100%, 53%, 0.106);
+        --background3: hsla(156, 36%, 25%, 0.102);
+        --background4: hsla(176, 100%, 53%, 0);
+        --background5: hsla(215, 70%, 56%, 0.402);
+        --background-default: linear-gradient( to bottom, rgba(76, 53, 53, 0.75), rgba(235, 77, 75, 0.750)), url(/sunset_salt_lake_L.jpeg);
+        --black-alpha-color: rgba(0, 0, 0, 0.5);
+        --black-color: hsl(0, 0%, 0%);
+        --color_active: hsl(0, 75%, 78%);
+        --color_link: hsl(240, 92%, 26%);
+        --color_visited: hsl(240, 66%, 52%);
+        --first-color: hsl(333, 100%, 43%);
+        --font_chivo: "Archivo", sans-serif;
+        --font_sans: "Sans", sans-serif;
+        --font_robo: "Roboto", sans-serif;
+        --font_robo_bold: "Roboto_Bold_Italic";
+        --font_cookie: "Cookie", sans-serif;
+        --gray-color: hsl(0, 0%, 80%);
+        --gray-dark-color: hsl(0, 0%, 40%);
+        --gray-light-color: hsl(0, 0%, 95%);
+        --header-height: 5rem;
+        --link-color: hsl(208, 72%, 60%);
+        --max-width: 1200px;
+        --second-alpha-color: rgba(20, 25, 45, 0.75);
+        --second-color: hsl(228, 38%, 13%);
+        --shadow1: 2px 0 red, 4px 0 blue;
+        --shadow2: 2px 0 hsl(0, 22%, 95%), 4px 0 blue;
+        --subtitle-color: hsla(93, 96%, 50%, 0.946);
+        --color_text-abbr_blue: blue;
+        --color_white: hsl(0, 0%, 100%);
+        --color_black: black;
+        --color_red_summary: hsl(0, 90%, 49%);
+        --color_violet: rgba(80, 20, 100, 0.75);
+        --color_gray: rgba(255, 255, 255, 0.5);
+        --width: 75%;
+    }
+    
+    html {
+        margin: 0;
+        padding: 0;
+        font-size: rem_size(16);
+    }
+    
+    body {
+        background-image: linear-gradient( to bottom, rgba(237, 234, 177, 0.978), rgba(249, 142, 142, 0.514)), url(/sunset_salt_lake_L.jpeg);
+        background-image: var(--background-default);
+        font-family: var(--font_robo);
+        color: var(--color_white);
+        font-size: 100%;
+        line-height: 1.88889;
+        margin: 0;
+        // padding: 5%;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+    }
+    
+    .page-wrapper {
+        grid-column: 2/6;
+        grid-row: 1/4;
+        .summary {
+            background: var(--background_bg);
+            font-family: var(--font_robo);
+            color: var(--color_gray);
+            font-size: clamp(rem_size(16), rem_size(32) + 1vw, rem_size(64));
+            letter-spacing: 1px;
+            margin-bottom: 0;
+            text-shadow: var(--shadow2);
+            padding: 1.5%;
+        }
+        .preamble {
+            background-color: var(--background2);
+            padding: 1.5%;
+        }
+        .page-wrapper .explanation .participation .benefits .requirements {
+            background-color: var(--background3);
+            padding: 1.5%;
+        }
+    }
+    
+    p {
+        margin-top: 0;
+        text-align: justify;
+        font-size: rem_size(16);
+    }
+    
+    .intro h1 {
+        font-size: clamp(rem_size(16), rem_size(32) + 2vw, rem_size(64));
+        font-family: var(--font_sans);
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        color: var(--color_red_summary);
+        text-shadow: var(--shadow1);
+        /* 3D effect */
+    }
+    
+    .intro h2 {
+        font-size: clamp(rem_size(16), rem_size(32) + 2vw, rem_size(64));
+        font-family: var(--font_cookie);
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        color: var(--subtitle-color);
+        text-shadow: var(--shadow2);
+        /* 3D effect */
+    }
+    
+    h3 {
+        font-size: clamp(rem_size(16), rem_size(32) + 1vw, rem_size(64));
+        font-family: var(--font_sans);
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        color: var(--color_black);
+        text-shadow: var(--shadow2);
+        /* 3D effect */
+        margin: 0;
+    }
+    
+    a:link {
+        font-weight: bold;
+        text-decoration: none;
+        color: var(--color_link);
+        font-family: var(--font_robo);
+        font-size: rem_size(18);
+    }
+    
+    a:visited {
+        font-weight: bold;
+        text-decoration: none;
+        color: var(--color_visited);
+    }
+    
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: underline;
+        color: var(--color_active);
+    }
+    
+    abbr {
+        border-bottom: none;
+        font-family: var(--font_cookie);
+    }
+    
+    footer {
+        /* display: flex;
+    align-content: center; */
+        /* font-size: 2em; */
+        padding: 0.1em 0.25em;
+        height: 4.2em;
+        border-radius: 0.3em;
+    }
+    
+    footer a {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        bottom: 0.4em;
+        width: 5em;
+        // height: 1.5em;
+        background: var(--background_star);
+        border-radius: 0.2em;
+        border: 0.08em solid var(--color_white);
+        box-shadow: 0 0.4em 0.1em 0.019em var(--color_gray);
+    }
+    
+    footer a:hover {
+        transition: all 0.5s;
+        transform: translate(0, 0.4em);
+        box-shadow: 0 0 0 0 var(--color_white);
+    }
+    
+    footer a:not(hover) {
+        transition: all 1s;
+    }
+    
+    footer a:link,
+    footer a:visited {
+        margin-right: 10px;
+    }
+    
+    .sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-left: 600px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .sidebar .wrapper {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        font: var(--font_robo);
+        font-size: rem_size(10);
+        padding: 10px;
+        margin-top: auto;
+        width: 130px;
+        background-image: var(--background_star);
+        box-shadow: rgba(46, 91, 240, 0.4) -5px 5px, rgba(49, 46, 240, 0.3) -10px 10px, rgba(46, 114, 240, 0.2) -15px 15px, rgba(46, 65, 240, 0.1) -20px 20px, rgba(46, 211, 240, 0.05) -25px 25px;
+    }
+    
+    .sidebar h3.select {
+        margin: 10px 0 5px 0;
+        width: 97px;
+        height: 16px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .sidebar h3.archives {
+        margin: 25px 0 5px 0;
+        width: 57px;
+        height: 14px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .sidebar h3.resources {
+        margin: 25px 0 5px 0;
+        width: 63px;
+        height: 10px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .sidebar ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .sidebar li {
+        line-height: 1.3em;
+        display: block;
+        padding-top: 5px;
+        margin-bottom: 5px;
+        list-style-type: none;
+    }
+    
+    .sidebar li a:link {
+        color: var(--color_);
+        font-family: var(--font_sans);
+        font-size: rem_size(10);
+    }
+    
+    .sidebar li a:visited {
+        color: hsl(50, 17%, 64%);
+    }
+    
+    .extra1 {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 148px;
+        height: 110px;
+    }
+    
+    @media screen and (max-width: 800px) {
+        body {
+            // display: block;
+            color: var(--color_white)
+        }
+        h1 h2 h3 {
+            font-family: var(--font_sans);
+            font-size: 1rem;
+            color: var(--font_sans);
+        }
+        .page-wrapper {
+            // grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+            // grid-auto-flow: dense;
+            padding: .5rem;
+            background: var(--background_star);
+            color: var(--color_gray);
+        }
+        .sidebar {
+            display: block;
+        }
+        .fopter {
+            display: flexbox;
+        }
+    }
