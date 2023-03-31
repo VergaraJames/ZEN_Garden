@@ -65,20 +65,15 @@
     }
     
      :root {
-        --background-color: linear-gradient( to bottom, rgba(237, 234, 177, 0.978), rgba(249, 142, 142, 0.514)), url(https://VergaraJames.github.io/ZEN_Garden/sunset_salt_lake_L.jpeg);
-        --background_bg: linear-gradient( to bottom, rgba(76, 53, 53, 0.75), rgba(235, 77, 75, 0.750)), url(https://VergaraJames.github.io/ZEN_Garden/bg3.png);
-        --background_star: linear-gradient( to bottom, rgba(75, 52, 52, 0.51), rgba(126, 78, 78, 0.498)), url(https://VergaraJames.github.io/ZEN_Garden/stars.gif);
+        --background-color: linear-gradient( to bottom, rgba(237, 234, 177, 0.978), rgba(249, 142, 142, 0.514)), url(/sunset_salt_lake_L.jpeg);
+        --background_bg: linear-gradient( to bottom, rgba(76, 53, 53, 0.75), rgba(235, 77, 75, 0.750)), url(/bg3.png);
+        --background_star: linear-gradient( to bottom, rgba(75, 52, 52, 0.51), rgba(126, 78, 78, 0.498)), url(/stars.gif);
         --background2: hsla(198, 100%, 53%, 0.106);
         --background3: hsla(156, 36%, 25%, 0.102);
-        --background4: hsla(176, 100%, 53%, 0);
-        --background5: hsla(215, 70%, 56%, 0.402);
-        --background-default: linear-gradient( to bottom, rgba(76, 53, 53, 0.75), rgba(235, 77, 75, 0.750)), url(https://VergaraJames.github.io/ZEN_Garden/sunset_salt_lake_L.jpeg);
-        --black-alpha-color: rgba(0, 0, 0, 0.5);
-        --black-color: hsl(0, 0%, 0%);
+        --background-default: linear-gradient( to bottom, rgba(76, 53, 53, 0.75), rgba(235, 77, 75, 0.750)), url(/sunset_salt_lake_L.jpeg);
         --color_active: hsl(0, 75%, 78%);
         --color_link: hsl(240, 92%, 26%);
         --color_visited: hsl(240, 66%, 52%);
-        --first-color: hsl(333, 100%, 43%);
         --font_chivo: "Archivo", sans-serif;
         --font_sans: "Sans", sans-serif;
         --font_robo: "Roboto", sans-serif;
@@ -87,11 +82,6 @@
         --gray-color: hsl(0, 0%, 80%);
         --gray-dark-color: hsl(0, 0%, 40%);
         --gray-light-color: hsl(0, 0%, 95%);
-        --header-height: 5rem;
-        --link-color: hsl(208, 72%, 60%);
-        --max-width: 1200px;
-        --second-alpha-color: rgba(20, 25, 45, 0.75);
-        --second-color: hsl(228, 38%, 13%);
         --shadow1: 2px 0 red, 4px 0 blue;
         --shadow2: 2px 0 hsl(0, 22%, 95%), 4px 0 blue;
         --subtitle-color: hsla(93, 96%, 50%, 0.946);
@@ -99,9 +89,7 @@
         --color_white: hsl(0, 0%, 100%);
         --color_black: black;
         --color_red_summary: hsl(0, 90%, 49%);
-        --color_violet: rgba(80, 20, 100, 0.75);
         --color_gray: rgba(255, 255, 255, 0.5);
-        --width: 75%;
     }
     
     html {
@@ -111,14 +99,13 @@
     }
     
     body {
-        background-image: linear-gradient( to bottom, rgba(237, 234, 177, 0.978), rgba(249, 142, 142, 0.514)), url(https://VergaraJames.github.io/ZEN_Garden/sunset_salt_lake_L.jpeg);
+        background-image: linear-gradient( to bottom, rgba(237, 234, 177, 0.978), rgba(249, 142, 142, 0.514)), url(/sunset_salt_lake_L.jpeg);
         background-image: var(--background-default);
         font-family: var(--font_robo);
         color: var(--color_white);
         font-size: 100%;
         line-height: 1.88889;
         margin: 0;
-        // padding: 5%;
         text-align: center;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -213,9 +200,6 @@
     }
     
     footer {
-        /* display: flex;
-    align-content: center; */
-        /* font-size: 2em; */
         padding: 0.1em 0.25em;
         height: 4.2em;
         border-radius: 0.3em;
@@ -227,7 +211,6 @@
         align-items: center;
         bottom: 0.4em;
         width: 5em;
-        // height: 1.5em;
         background: var(--background_star);
         border-radius: 0.2em;
         border: 0.08em solid var(--color_white);
@@ -331,7 +314,6 @@
     
     @media screen and (max-width: 800px) {
         body {
-            // display: block;
             color: var(--color_white)
         }
         h1 h2 h3 {
